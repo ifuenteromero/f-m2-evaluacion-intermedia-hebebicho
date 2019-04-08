@@ -33,16 +33,22 @@ function addAcc(){
 function handlerClick(){
     //ejecutar contador + 1
     addAcc();
-    const choosenNumber = inputEl.value;
-    if (choosenNumber < randomNumber ) {
-        clue.innerHTML = 'demasiado bajo';
+    const choosenNumber = parseInt(inputEl.value);
+    // if (choosenNumber < randomNumber ) {
+    //     clue.innerHTML = 'demasiado bajo';
+    // } else if (choosenNumber > randomNumber ) {
+    //     clue.innerHTML = 'demasiado alto';
+    // } else {
+    //     clue.innerHTML = '¡HAS GANADO, CAMPEONA!';
+    // }
+
+    if (choosenNumber === randomNumber ) {
+        clue.innerHTML = '¡HAS GANADO, CAMPEONA!';
     } else if (choosenNumber > randomNumber ) {
         clue.innerHTML = 'demasiado alto';
     } else {
-        clue.innerHTML = '¡HAS GANADO, CAMPEONA!';
+        clue.innerHTML = 'demasiado bajo';
     }
-  
-
 }
 
 //listener
