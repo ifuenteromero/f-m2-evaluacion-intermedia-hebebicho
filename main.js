@@ -35,7 +35,11 @@ function handlerClick(){
     addAcc();
     const choosenNumber = inputEl.value;
     if (choosenNumber < randomNumber ) {
-
+        clue.innerHTML = 'demasiado bajo';
+    } else if (choosenNumber > randomNumber ) {
+        clue.innerHTML = 'demasiado alto';
+    } else {
+        clue.innerHTML = '¡HAS GANADO, CAMPEONA!';
     }
   
 
